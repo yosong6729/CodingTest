@@ -1,7 +1,6 @@
 import java.util.*;
 
 public class Main {
-// TODO: 6.9 다시 풀기, 6.10 다시 풀기, 7.4 다시풀기, 7.5 다시풀기, 7.14 인접 리스트로 풀기
 
 	static int n, m;
 	static int min = Integer.MAX_VALUE;
