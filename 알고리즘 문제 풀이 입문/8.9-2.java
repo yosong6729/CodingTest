@@ -3,21 +3,18 @@ import java.util.*;
 public class Main {
 	
 	static int n, m;
-	static int[] result;
+	static int[] combi;
 	public void DFS(int L, int a) {
 		if(L == m) {
-			for(int i = 1; i <= m; i++) {
-				System.out.print(result[i] + " ");
+			for(int x : combi) {
+				System.out.print(x + " ");
 			}
 			System.out.println();
-			
 			return;
 		}else {
-			for(int i = 1; i <= n; i++) {
-				if(i > a) {
-					result[L + 1] = i;
-					DFS(L + 1, i);
-				}
+			for(int i = a; i <= n; i++) {
+				combi[L] = i;
+				DFS(L + 1, i + 1);
 			}
 		}
 		
@@ -29,9 +26,9 @@ public class Main {
 		
 		n = kb.nextInt();
 		m = kb.nextInt();
-		result = new int[m + 1];
+		combi = new int[m];
 		
-		T.DFS(0, 0);
+		T.DFS(0, 1);
 		
 	}
 }
