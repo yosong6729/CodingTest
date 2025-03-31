@@ -42,24 +42,12 @@ class Main {
 			Arrays.sort(arr);
 			
 			int docMin = arr[0].doc;
-			int interviewMin = arr[0].interview;
 			int result = 1;
 			
 			for(int j = 1; j < n; j++) {
-				boolean flag = true;
 				Score score = arr[j];
-				
 				if(docMin > score.doc) {
 					docMin = score.doc;
-					flag = false;
-				}
-				
-				if(interviewMin > score.interview) {
-					interviewMin = score.interview;
-					flag = false;
-				}
-				
-				if(!flag) {
 					result++;
 				}
 			}
