@@ -60,7 +60,7 @@ public class Main {
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
 		n = Integer.parseInt(st.nextToken());
-		m = Integer.parseInt(st.nextToken());
+		m = Integer.parseInt(st.nextToken());for
 		W = 0;
 		B = 0;
 		
